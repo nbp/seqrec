@@ -40,7 +40,8 @@ recordBytes(unsigned char* value, size_t size)
     f.putChar(static_cast<unsigned char>(depth));        // 1 byte
     f.put(reinterpret_cast<char*>(sptr), depth * sizeof(void*)); // 0-64 * 4/8 bytes
     f.flush();
-}```
+}
+```
 
 Before running the instrumented executable, you should start the `learn.py`
 program, which is in charge of creating the Fifo, and waiting for results as
